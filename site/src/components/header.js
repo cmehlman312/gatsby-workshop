@@ -1,11 +1,16 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import Logo from "../images/pencil-icon.png";
+import Logo from "../images/shoe.png";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
-  const NavLinks = [{ href: "/", name: "Home" }];
+  const NavLinks = [
+    { href: "/", name: "Home" },
+    { href: "/tickets", name: "Tickets" },
+    { href: "/#schedule", name: "Schedule" },
+    { href: "/speakers", name: "Speakers" },
+  ];
 
   return (
     <nav className="bg-white">

@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import Banner from "./banner";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -17,6 +18,7 @@ function Layout({ children }) {
 
   return (
     <div className="flex flex-col font-sans min-h-screen text-gray-900">
+      <Banner />
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <main className="flex flex-col flex-1 md:justify-center max-w-4xl mx-auto px-4 py-8 md:p-8 w-full">

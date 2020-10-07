@@ -1,10 +1,11 @@
 /*eslint no-template-curly-in-string:0*/
 module.exports = {
   siteMetadata: {
-    title: `SketchXConf 2020`,
-    description: `description`,
-    author: `@you`,
-    siteUrl: `https://monica.dev/gatsbyworkshop`,
+    title: `Gatsby Starter Blog`,
+    description: `Blazing fast modern site generator for React`,
+    longdescription: `Blazing fast modern site generator for React from the Jamstck conference 2020`,
+    author: `Craig`,
+    siteUrl: `https://www.gatsbyjs.org`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,7 +18,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/pencil-icon.png`,
+        icon: `src/images/shoe.png`,
       },
     },
     `gatsby-plugin-postcss`,
@@ -29,5 +30,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data`,
+      },
+    },
   ],
 };
